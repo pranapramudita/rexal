@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app class="myFont">
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+    </v-app-bar>
+
+    <v-content>
+      <home/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import home from '../src/components/home'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    home
+  },
+  data() {
+    return {
+      
+    }
+  },
+  methods:{
+    
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.myFont{
+  font-family: "VSCO Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important
 }
 </style>
