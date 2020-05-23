@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="home caption">
         <v-container fluid>
             <v-layout 
                 row 
@@ -13,12 +13,24 @@
                     :key="index"
                     align-self-end
                     ma-5
-                    pa-4
                 >
                     <v-img :src="data.urls.small"></v-img>
                     <div class="mt-1 font-weight-thin">{{ data.user.username }}</div>
                 </v-flex>
             </v-layout>
+            <v-container fluid>
+                <v-layout row wrap justify-center>
+                    <v-btn 
+                        depressed 
+                        tile 
+                        class="white--text caption align-center mb-6" 
+                        color="black" 
+                        @click="morePhoto()"
+                    >
+                        load more
+                    </v-btn>
+                    </v-layout>
+            </v-container>
         </v-container>
     </div>
 </template>
@@ -30,20 +42,29 @@ import { toJson } from "unsplash-js";
 export default {
     data() {
         return {
-            datas: {}
+            datas: {},
+            photos: 10,
         }
     },
-    beforeCreate(){
-        unsplash.search.photos("california", 1, 50, { orientation: "portrait" })
-        .then(toJson)
-        .then(json => {
-            this.datas = json.results
-            console.log(this.datas)
-        })
+    methods:{
+        searchPhoto(photos){
+            return unsplash.search.photos("vsco", 1, photos)
+            .then(toJson)
+            .then(json => {
+                this.datas = json.results
+                console.log(this.datas)
+            })
+        },
+        morePhoto(){
+            this.photos += 10
+            this.searchPhoto(this.photos)
+        },
+    },
+    created(){
+        this.searchPhoto(this.photos)
     }    
 }
 </script>
 
 <style>
-
 </style>
