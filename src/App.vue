@@ -1,12 +1,6 @@
 <template>
   <v-app class="myFont">
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-    </v-app-bar>
-
+    <navbar/>
     <v-content>
       <home/>
     </v-content>
@@ -14,12 +8,13 @@
 </template>
 
 <script>
-import home from '../src/components/home'
+import home from '../src/components/Home'
+import navbar from '../src/components/Navbar'
 
 export default {
   name: 'App',
   components: {
-    home
+    home, navbar
   },
   data() {
     return {
@@ -34,6 +29,7 @@ export default {
 
 <style>
 .myFont{
-  font-family: "VSCO Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important
+  font-family: "VSCO Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-size: 12px;
 }
 </style>
