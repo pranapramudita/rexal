@@ -3,22 +3,24 @@
         color="white"
         flat
         dark
+        class="px-12 py-4"
     >
-        <v-btn append small icon tile light>
-            <v-icon small>mdi-magnify</v-icon>
+        <v-btn append icon tile light>
+            <v-icon>mdi-magnify</v-icon>
         </v-btn>
-        <v-btn small icon tile light>
-            <v-icon small>mdi-account-outline</v-icon>
+        <v-btn icon tile light>
+            <v-icon>mdi-account-outline</v-icon>
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn small text tile light><span class="text-uppercase">VSCO</span></v-btn>
-        <v-btn small text tile light><span class="text-capitalize">Feed</span></v-btn>
-        <v-btn small text tile light><span class="text-lowercase">username</span></v-btn>
-        <v-btn small icon tile light>
-            <v-icon small>mdi-gamepad-circle-outline</v-icon>
+        <v-btn text tile light><span class="text-uppercase">rexal</span></v-btn>
+        <v-spacer></v-spacer>
+        <v-btn text tile light><span class="text-capitalize">feed</span></v-btn>
+        <v-btn text tile light><span class="text-lowercase">username</span></v-btn>
+        <v-btn icon tile light>
+            <v-icon>mdi-gamepad-circle-outline</v-icon>
         </v-btn>
-        <v-btn small icon tile light>
-            <v-icon small>mdi-cached</v-icon>
+        <v-btn icon tile light>
+            <v-icon>mdi-cached</v-icon>
         </v-btn>
     </v-app-bar>
 </template>
