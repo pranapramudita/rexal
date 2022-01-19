@@ -1,4 +1,9 @@
-# rexal
+# r e x a l
+rexal is a website to discover visual content. This website is builded with vue.js framework.
+
+### Website Screenshot :
+![](rexal.png)
+
 
 ## Project setup
 ```
